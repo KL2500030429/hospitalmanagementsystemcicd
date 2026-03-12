@@ -1,0 +1,42 @@
+.panel-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #0f2c44;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #1e4b7a;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  background-color: #2563eb;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f4f4f4;
+}

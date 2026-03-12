@@ -1,0 +1,512 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Grid Layout */
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu pbody pbody"
+    "footer footer footer";
+  grid-template-rows: 90px 1fr 50px;
+  grid-template-columns: 220px 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+/* ================= HEADER ================= */
+.header {
+  grid-area: header;
+  background: #0d47a1; /* Dark Blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.header h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Header Buttons */
+.header-actions {
+  display: flex;
+  gap: 12px;
+  text-align: center;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: white;
+  color: #0d47a1;
+}
+
+.signup-btn {
+  background: #1976d2;
+  color: white;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+}
+
+/* ================= SIDEBAR MENU ================= */
+.menu {
+  grid-area: menu;
+  background: #102a43;
+  color: white;
+  padding: 20px;
+  
+}
+
+.menu h3 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #4fc3f7;
+  padding-bottom: 8px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #0d47a1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu ul li:hover {
+  background: #1976d2;
+}
+
+/* ✅ TEXT COLOR WHITE */
+.menu ul li a {
+  text-decoration: none;
+  color: white;            /* changed from #333 */
+  display: block;
+  padding: 8px 10px;
+  transition: font-weight 0.2s ease;
+  
+}
+
+/* ✅ BOLD ON HOVER */
+.menu ul li:hover a {
+  font-weight: bold;
+}
+
+/* ACTIVE LINK */
+.menu ul li a.active {
+  background: #0d47a1;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ================= PAGE BODY ================= */
+.pbody {
+  grid-area: pbody;
+  background: #e3f2fd;
+  padding: 25px;
+}
+
+.pbody h2 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  grid-area: footer;
+  background: #0d47a1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+/* ===== AUTH BODY CENTERING ===== */
+.auth-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== AUTH CARD ===== */
+.auth-container {
+  background: white;
+  padding: 30px;
+  width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-btn:hover {
+  background: #1565c0;
+}
+
+/* ===== SWITCH TEXT ===== */
+.switch-auth {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switch-auth span {
+  color: #0d47a1;
+  font-weight: bold;
+  cursor: pointer;
+}
+.banner-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #1e90ff;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dept-card, .doctor-card {
+  background: #f2f8ff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+}
+
+.dept-card img, .doctor-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.about-img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.contact-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Doctors page cards */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.doctor-card {
+  width: 230px;
+  background: #f2f8ff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 240px;          /* neat height */
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* MAGIC line */
+}
+
+/* Dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Text on image */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.hero-overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+/* Fade animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  background-color: #0d6efd;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #084298;
+  transform: scale(1.05);
+}
+/* COMMON */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section {
+  padding: 20px;
+  background: #eaf4ff;
+}
+
+/* GRID */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* DOCTOR CARD */
+.doctor-card, .dept-card {
+  width: 230px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.doctor-card:hover, .dept-card:hover {
+  transform: translateY(-6px);
+}
+
+.doctor-card img, .dept-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* BUTTONS */
+.small-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  border: none;
+  background: #1e90ff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* AUTH PAGES */
+.auth-container {
+  max-width: 350px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.sub-text {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.doctor-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+}
+
+.doctor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 4px solid #1e90ff;
+}
+
+.doctor-card h3 {
+  margin: 6px 0;
+  color: #0b3c8a;
+}
+
+.doctor-card p {
+  font-weight: 600;
+  color: #1e90ff;
+}
+
+.doctor-card span {
+  display: block;
+  font-size: 14px;
+  margin: 8px 0;
+  color: #555;
+}
+
+.doctor-card button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.doctor-card button:hover {
+  background: #0b5ed7;
+}
+
